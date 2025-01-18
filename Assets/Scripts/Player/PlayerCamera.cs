@@ -13,6 +13,9 @@ namespace Player
 
         private void Update()
         {
+			//block controls if pausing
+			if (PauseMenuManager.instance.isInPause) return;
+			
             var raycast = Physics.Raycast(Cam.transform.position, Cam.transform.forward, out var interactableHit, holdRaycastDistance, interactableLayer);
             
             if (player.input.actions["Hold"].IsPressed())

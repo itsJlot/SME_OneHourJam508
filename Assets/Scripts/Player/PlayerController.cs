@@ -7,6 +7,8 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+		void Awake() => PlayerController.instance = this;
+		
         private void Start()
         {
             Walk = input.actions["Walk"];
@@ -14,11 +16,19 @@ namespace Player
             Look = input.actions["Look"];
             Run = input.actions["Run"];
 
-            Cursor.lockState = CursorLockMode.Locked;
+            CursorMode(true);
         }
+		
+		public void CursorMode(bool _lock)
+		{
+			Cursor.lockState = (_lock ? CursorLockMode.Locked : CursorLockMode.None);
+		}
 
         private void Update()
         {
+			//block controls if pausing
+			if (PauseMenuManager.instance.isInPause) return;
+			
             if (!grounded) rig.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
         
             if (Walk.IsPressed())
@@ -40,7 +50,8 @@ namespace Player
                 StartCoroutine(DoJump());
             }
 
-            Rotation += Look.ReadValue<Vector2>() * (lookSpeed * Time.deltaTime);
+			//apply sens from pause menu manager
+            Rotation += Look.ReadValue<Vector2>() * ((lookSpeed * PauseMenuManager.instance.sensM * 5f) * Time.deltaTime);
 
             transform.localEulerAngles = new Vector3(0f, Rotation.x, 0f);
 
@@ -68,6 +79,9 @@ namespace Player
             jumping = false;
         }
         
+		//for ui...
+		public static PlayerController instance;
+		
         private InputAction Walk;
         private InputAction Jump;
         private InputAction Look;
