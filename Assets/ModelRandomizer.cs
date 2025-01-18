@@ -29,7 +29,7 @@ public class ModelRandomizer : MonoBehaviour
         activeHairPart.GetComponent<SkinnedMeshRenderer>().material.color = Random.ColorHSV(0, 1, 0.5f, 0.8f);
         GameObject activeBottomPart = bottom[Random.Range(0,bottom.Length)];
         activeBottomPart.SetActive(true);
-        activeBottomPart.GetComponent<SkinnedMeshRenderer>().material.color = Random.ColorHSV(0, 1, 0.5f, 0.8f);        
+        activeBottomPart.GetComponent<SkinnedMeshRenderer>().material.color = Random.ColorHSV(0, 1, 0.7f, 1f);        
         GameObject activeTopPart = top[Random.Range(0,top.Length)];
         activeTopPart.SetActive(true);
         activeTopPart.GetComponent<SkinnedMeshRenderer>().material.color = Random.ColorHSV(0, 1, 0.5f, 0.8f);

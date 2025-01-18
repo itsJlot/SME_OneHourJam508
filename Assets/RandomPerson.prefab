@@ -407,6 +407,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb037bdd72b3d5544be5e7a09011ce86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1264960390011263544}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb037bdd72b3d5544be5e7a09011ce86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2197496956491825566}
   m_SourcePrefab: {fileID: 100100000, guid: bb037bdd72b3d5544be5e7a09011ce86, type: 3}
 --- !u!1 &150659955025573995 stripped
 GameObject:
@@ -540,6 +543,21 @@ CapsuleCollider:
   m_Height: 27.966583
   m_Direction: 1
   m_Center: {x: 0, y: 6.9833145, z: -0.0000003842134}
+--- !u!114 &2197496956491825566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448581797428831188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ae3903e01338d48b10398977661dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatPos: {fileID: 6298307138918965368}
+  glassesPos: {fileID: 2834210715406280125}
+  cupPos: {fileID: 1659277647014364730}
 --- !u!1 &5865654760570257078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7621545797381464013, guid: bb037bdd72b3d5544be5e7a09011ce86, type: 3}
