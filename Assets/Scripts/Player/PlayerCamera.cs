@@ -19,21 +19,6 @@ namespace Player
             {
                 if (selectedInteractable)
                 {
-                    if (raycast && interactableHit.rigidbody == selectedInteractable.rig)
-                    {
-                        framesTillDrop = 0;
-                    }
-                    else
-                    {
-                        framesTillDrop++;
-                        if (framesTillDrop >= framesToDrop)
-                        {
-                            selectedInteractable.OnDrop();
-                            selectedInteractable = null;
-                            return;
-                        }
-                    }
-                    
                     PerformForceOnInteractable(selectedInteractable);
                     
                     CounterForSnap += Time.deltaTime;
@@ -41,6 +26,7 @@ namespace Player
                     if (CounterForSnap >= timeTillCanSnap)
                     {
                         CounterForSnap = 0f;
+                        
                         var hits = new RaycastHit[2];
                         Physics.SphereCastNonAlloc(selectedInteractable.transform.position, snapToNpcDistance, Vector3.down,
                             hits, 0f, npcLayer);
@@ -62,7 +48,6 @@ namespace Player
                             if (interactable.OnInteract())
                             {
                                 selectedInteractable = interactable;
-                                CounterForSnap = 0f;
                             }
                         }
                     }
@@ -101,11 +86,10 @@ namespace Player
 
         public PlayerController player;
 
-        private float CounterForSnap;
+        public float CounterForSnap;
         
         private Camera Cam;
 
-        public int framesToDrop = 5;
     
         [Header("Values")]
 
@@ -122,8 +106,6 @@ namespace Player
         public LayerMask npcLayer;
 
         [Header("Debug")] 
-        
-        public int framesTillDrop;
         
         public Vector3 hitPoint;
 

@@ -17,7 +17,11 @@ namespace Props
             {
                 OnNpcCounter += Time.deltaTime;
 
-                if (OnNpcCounter >= timeTillCanBeGrabbed) canBeInteractedWith = true;
+                if (OnNpcCounter >= timeTillCanBeGrabbed)
+                {
+                    OnNpcCounter = 0f;
+                    canBeInteractedWith = true;
+                }
             }
         }
         
@@ -41,11 +45,6 @@ namespace Props
 
             dropEvent.Invoke();
         }
-
-        public void OnHold()
-        {
-            holdEvent.Invoke();
-        }
         
         public void SnapToNpc(Transform npcTransform)
         {
@@ -58,12 +57,13 @@ namespace Props
                 case PropType.Glasses:
                     transform.position = npc.glassesPos.position;
                     break;
-                case PropType.NoSnap:
-                    return;
+                case PropType.Cup:
+                    transform.position = npc.cupPos.position;
+                    break;
             }
             
             rig.isKinematic = true;
-
+            transform.localEulerAngles = Vector3.zero;
             canBeInteractedWith = false;
         }
 
@@ -71,11 +71,11 @@ namespace Props
         {
             Hat,
             Glasses,
-            NoSnap
+            Cup
         }
 
         public PropType propType;
-        private float OnNpcCounter;
+        public float OnNpcCounter;
         public float timeTillCanBeGrabbed = 1f;
         public bool canBeInteractedWith = true;
 

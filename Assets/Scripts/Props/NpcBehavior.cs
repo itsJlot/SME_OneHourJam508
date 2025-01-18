@@ -18,4 +18,5 @@ public class NpcBehavior : MonoBehaviour
 
     public Transform hatPos;
     public Transform glassesPos;
+    public Transform cupPos;
 }
