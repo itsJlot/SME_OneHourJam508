@@ -1549,11 +1549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99691737
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.078459114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1565,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1598,7 +1598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.720483
+      value: 15.15
       objectReference: {fileID: 0}
     - target: {fileID: 8944959519317033587, guid: 6dc642e6102fa2142bfbe2823f3f265b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2299,8 +2299,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035884948893322613}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.7061577, y: 20.62126, z: 7.3331223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.34, y: 16.03, z: 7.3331223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be930f714b675b41998175046acdb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propType: 2
   timeTillCanBeGrabbed: 1
   canBeInteractedWith: 1
   rig: {fileID: 5113471757609730704}
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be930f714b675b41998175046acdb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propType: 2
   timeTillCanBeGrabbed: 1
   canBeInteractedWith: 1
   rig: {fileID: 6357520564247147295}
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be930f714b675b41998175046acdb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propType: 2
   timeTillCanBeGrabbed: 1
   canBeInteractedWith: 1
   rig: {fileID: 6357520564483254650}
@@ -2845,7 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be930f714b675b41998175046acdb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propType: 2
   timeTillCanBeGrabbed: 1
   canBeInteractedWith: 1
   rig: {fileID: 6357520564569323660}
@@ -2907,7 +2907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be930f714b675b41998175046acdb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propType: 0
+  propType: 2
   timeTillCanBeGrabbed: 1
   canBeInteractedWith: 1
   rig: {fileID: 6357520565284105916}

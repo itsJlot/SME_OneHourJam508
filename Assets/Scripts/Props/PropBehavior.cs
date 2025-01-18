@@ -49,10 +49,7 @@ namespace Props
         
         public void SnapToNpc(Transform npcTransform)
         {
-            rig.isKinematic = true;
-            
             var npc = npcTransform.GetComponent<NpcBehavior>();
-            
             switch (propType)
             {
                 case PropType.Hat:
@@ -61,10 +58,11 @@ namespace Props
                 case PropType.Glasses:
                     transform.position = npc.glassesPos.position;
                     break;
-                default:
-                    Debug.Log("Wtf");
-                    break;
+                case PropType.NoSnap:
+                    return;
             }
+            
+            rig.isKinematic = true;
 
             canBeInteractedWith = false;
         }
@@ -72,7 +70,8 @@ namespace Props
         public enum PropType
         {
             Hat,
-            Glasses
+            Glasses,
+            NoSnap
         }
 
         public PropType propType;
